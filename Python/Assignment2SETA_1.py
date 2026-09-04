@@ -4,3 +4,16 @@ entered are duplicates otherwise it prints “ALL UNIQUE”. Example: Let 5 inte
 
 
 
+set= set()
+
+for i in range(5):
+    a=int(input(f"Enter {i} Element in set"))
+    set.add(a)
+
+if len(set)<5:
+    print("Duplicates")
+    print(set)
+
+else:
+    print("All unique")
+    print(set)
