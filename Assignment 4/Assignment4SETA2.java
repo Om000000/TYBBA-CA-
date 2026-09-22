@@ -2,6 +2,9 @@
 /* 2. Write a java program to check whether given candidate is eligible for voting or not. Handle
 user defined as well as system defined Exception. */
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 class votingageexception extends Exception{
     public votingageexception(String message){
     super(message);
@@ -24,9 +27,12 @@ class votingsystem{
 public class Assignment4SETA2{
 
     public static void main(String[] args) {
-        int userAge=15;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your age");
+        
         
         try {
+            int userAge=sc.nextInt();
             System.out.println("Checking voting eligibility for age: " + userAge);
             votingsystem.checkEligibility(userAge);
         } 
@@ -35,6 +41,9 @@ public class Assignment4SETA2{
         
         
         
+        }
+        catch(InputMismatchException v){
+            System.out.println("predefined exception invalid input");
         }
 
 
