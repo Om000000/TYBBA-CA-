@@ -5,5 +5,15 @@ import game.*;
 class Assignment3SETB5{
 
 
+    public static void main(String[] args) {
+        
+    
+    Indoor i=new Indoor();
+    i.display();
+    Outdoor o=new Outdoor();
+    o.display();
+    }
+
+
     
 }

@@ -1,6 +1,6 @@
-/* Define an Interface “Integer” with a abstract method check().Write a Java program to check whether 
-a given number is Positive or Negative. 
- */
+/* Define an Interface Integer with a abstract method check Write a Java program to check whether 
+a given number is Positive or Negative */
+
 import java.util.Scanner;
 interface Integer {
     public void check(int num);
@@ -12,7 +12,11 @@ class Number implements Integer{
         }
     
         if(num<0){
-            System.err.println("Number is negative");
+            System.out.println("Number is negative");
+        }
+
+        else{
+            System.out.println("The num is zero");
         }
     }
 }
@@ -23,6 +27,7 @@ public static void main(String[] args) {
     int num=sc.nextInt();
     Number n=new Number();
     n.check(num);
+    sc.close();
 }
     
 
